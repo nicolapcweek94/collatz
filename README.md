@@ -3,8 +3,6 @@
 
 Some implementations of the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) in random programming languages.
 
-Everything in this repo was written by me on a boring rainy wednesday morning.
-
 Copyleft (c) 2013, Nicolapcweek94  
 
 Licensed under the DWTFYWWDC license.
