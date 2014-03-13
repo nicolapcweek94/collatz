@@ -1,16 +1,12 @@
-defmodule Collatz do
-  def calc(n) when n != 1 do
-    IO.puts to_string n
-    if rem(n, 2) == 1 do
-      calc(3 * n + 1)
+collatz = fn num, func ->
+    IO.puts to_string num
+    if rem(num, 2) == 1 do
+        unless num == 1 do
+            func.(3 * num + 1, func)
+        else 1 end
     else
-      calc(div(n, 2))
+        func.(div(num, 2), func)
     end
-  end
-
-  def calc(1) do
-    1 
-  end
 end
 
-IO.puts to_string Collatz.calc 9
+collatz.(9, collatz)
