@@ -1,17 +1,12 @@
 object Collatz {
-    def collatz(x: Int)
-    {
+    def collatz(x: Int): Int = {
         println(x)
-        if (x <= 1)
-            return 1
+        if (x <= 1) 1
+        else if (x % 2 == 0) collatz(x / 2)
+        else collatz(3*x+1)
+        }
 
-        if (x % 2 == 0)
-            return collatz(x / 2)
-
-        return collatz(3*x+1)
-    }
-    def main(args: Array[String])
-    {
+    def main(args: Array[String]) {
         collatz(9)
     }
 }
